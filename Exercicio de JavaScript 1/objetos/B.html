@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+
+            // NÃO ENTENDI NADA DESSE CÓDIGO, preciso que voce explique ele
+            // código do chat gpt
+
+            function Item(nome, preco, quantidade) {
+            this.nome = nome;
+            this.preco = preco;
+            this.quantidade = quantidade;
+            }
+
+            function CarrinhoDeCompras() {
+            this.itens = [];
+
+            this.adicionarItem = function(item) {
+                this.itens.push(item);
+            };
+
+            this.calcularTotal = function() {
+                let total = 0;
+                for (let item of this.itens) {
+                total += item.preco * item.quantidade;
+                }
+                return total;
+            };
+            }
+
+            let carrinho = new CarrinhoDeCompras();
+
+            let item1 = new Item("Camiseta", 29.99, 2);
+            let item2 = new Item("Calça Jeans", 49.99, 1);
+            let item3 = new Item("Tênis", 79.99, 1);
+
+            carrinho.adicionarItem(item1);
+            carrinho.adicionarItem(item2);
+            carrinho.adicionarItem(item3);
+
+            let totalCompra = carrinho.calcularTotal();
+
+            console.log("Itens no carrinho:");
+            for (let item of carrinho.itens) {
+            console.log(item.nome + " - R$" + item.preco.toFixed(2) + " x " + item.quantidade);
+            }
+            console.log("Total da compra: R$" + totalCompra.toFixed(2));
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            const array = ['a', 'b', 'c', 'b']; // definir uma lista
+
+            for (let i = 0; i < array.length; i++) { //definir um loop para ver cada elemento da lista
+            const element = array[i]; // pegar o código do elemento na lista e armazenar no i
+
+            if (array.indexOf(element) !== i) { // se a lista array tiver em um dos seus caracteres
+                                                // e se ele ver que já ocorreu a mesmaverificação
+                                                // com outra letra, ele vai e imprima a mesnagem de 
+                                                // duplicado
+                                                
+                console.log(`The element ${element} is a duplicate.`);
+            }
+            }
+        </script>
+    </body>
+</html>
